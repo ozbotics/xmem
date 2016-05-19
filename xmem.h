@@ -32,7 +32,7 @@ namespace xmem {
 	struct heapState {
 			char *__malloc_heap_start;
 			char *__malloc_heap_end;
-			void *__brkval;
+			int *__brkval;
 			void *__flp;
 	};
 
@@ -65,7 +65,7 @@ namespace xmem {
 
 extern "C" {
 	extern void *__flp;
-	extern void *__brkval;
+  extern int* __brkval;
 }
 
 #endif
